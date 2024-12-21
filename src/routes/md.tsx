@@ -27,5 +27,5 @@ export default function HelloMd() {
         }
     });
     
-    return <div innerHTML={md()} />;
+    return <article class="prose lg:prose-xl"><div innerHTML={md()} /></article>;
 }
