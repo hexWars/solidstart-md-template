@@ -7,7 +7,18 @@ import remarkRehype from 'remark-rehype'
 import { unified } from 'unified'
 import { createEffect, createSignal } from 'solid-js';
 
+// 使用 glob 导入所有 markdown 文件
+const posts = import.meta.glob('../contents/**/*.md', { eager: true });
+
 export default function HelloMd() {
+    // 遍历所有文件
+    console.log("文章数量:" + posts.length);
+    Object.entries(posts).forEach(([path, post]) => {
+        console.log(path);
+        console.log(post.attributes); // 访问 frontmatter
+        console.log(post.html);  // 访问渲染后的 HTML
+    });
+
     const processor = unified()
         .use(remarkParse)
         .use(remarkFrontmatter)
@@ -26,6 +37,6 @@ export default function HelloMd() {
             console.error("Error processing Markdown:", error);
         }
     });
-    
+
     return <article class="prose lg:prose-xl"><div innerHTML={md()} /></article>;
 }
