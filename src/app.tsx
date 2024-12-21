@@ -11,7 +11,9 @@ export default function App() {
       root={props => (
         <>
           <Nav />
-          <Suspense>{props.children}</Suspense>
+          <div class="bg-sky-100 container max-w-[720px]">
+            <Suspense>{props.children}</Suspense>
+          </div>
         </>
       )}
     >
