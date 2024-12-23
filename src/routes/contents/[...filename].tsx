@@ -22,8 +22,7 @@ export default function BlogPage() {
 
     return (
         <div class="container py-8">
-            <article class="prose lg:prose-xl dark:prose-invert">
-                <h1>{currentPost()?.attributes?.title}</h1>
+            <article class="prose prose-lg dark:prose-invert">
                 <div innerHTML={currentPost()?.html} />
             </article>
         </div>
