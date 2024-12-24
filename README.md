@@ -71,6 +71,12 @@ Start production server:
 npm run start
 ```
 
+## Preview
+
+![Homepage Preview](./public/image.png)
+
+![Homepage Preview](./public/image2.png)
+
 ## Tech Stack
 
 - [SolidStart](https://start.solidjs.com)
