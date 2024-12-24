@@ -1,32 +1,80 @@
-# SolidStart
+# SolidStart MD Template
 
-Everything you need to build a Solid project, powered by [`solid-start`](https://start.solidjs.com);
+A blog template built with SolidStart and TailwindCSS, featuring Markdown content rendering.
 
-## Creating a project
+## Features
+
+- 📝 Markdown blog support
+- 🎨 TailwindCSS styling
+- 🔍 File-based routing
+
+## Quick Start
+
+1. Clone the project:
+
+2. Install dependencies:
 
 ```bash
-# create a new project in the current directory
-npm init solid@latest
-
-# create a new project in my-app
-npm init solid@latest my-app
+npm install
 ```
 
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+3. Start development server:
 
 ```bash
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
-## Building
+Visit [http://localhost:3000](http://localhost:3000) to see your app.
 
-Solid apps are built with _presets_, which optimise your project for deployment to different environments.
+## Project Structure
 
-By default, `npm run build` will generate a Node app that you can run with `npm start`. To use a different preset, add it to the `devDependencies` in `package.json` and specify in your `app.config.js`.
+```
+src/
+  ├── components/    # Reusable components
+  ├── contents/      # Markdown blog posts
+  ├── routes/        # Page routes
+  ├── lib/          # Utility functions
+  ├── app.css       # Global styles
+  └── app.tsx       # App entry
+```
 
-## This project was created with the [Solid CLI](https://solid-cli.netlify.app)
+## Writing Blog Posts
+
+Create `.md` files in 
+
+contents
+
+ directory:
+
+```md
+---
+title: Post Title
+pubDate: 2024-12-25
+description: Post description
+tags: ["tag1", "tag2"]
+---
+
+# Post content
+```
+
+## Building for Production
+
+Build the project:
+
+```bash
+npm run build
+```
+
+Start production server:
+
+```bash
+npm run start
+```
+
+## Tech Stack
+
+- [SolidStart](https://start.solidjs.com)
+- [TailwindCSS](https://tailwindcss.com)
+- [vite-plugin-markdown](https://github.com/hmsk/vite-plugin-markdown)
+
+
